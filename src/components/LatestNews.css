@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .site-body {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .main-heading {
+    font-size: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-heading::before {
+    content: "";
+    background-color: #a7100c;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  
+  .news-list-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #e4cfcd;
+    border-bottom: 1px solid #e4cfcd;
+    background-color: #fdf9f8;
+    padding: 0 24px;
+    margin-bottom: 100px;
+  }
+  
+  .news-list-wrapper .news-item {
+    display: flex;
+  }
+  
+  .news-item .item-left {
+    padding: 16px 16px 16px 0;
+    flex: 0 0 145px;
+    font-size: 0.9rem;
+    border-top: 1px solid #e4cfcd;
+  }
+  
+  .news-item:first-child .item-left {
+    border-top: none;
+  }
+  
+  .news-item .item-left time {
+    font-weight: bold;
+  }
+  
+  .news-item .item-left p {
+    margin: 0;
+  }
+  
+  .news-item .item-right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 0;
+    border-top: 1px solid #e4cfcd;
+  }
+  
+  .news-item:first-child .item-right {
+    border-top: none;
+  }
+  
+  .news-item .item-content-wrapper a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .news-item .item-content-wrapper a h2 {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+  
+  .news-item .item-content-wrapper a  h2:hover {
+    text-decoration: underline;
+  }
+  
+  .news-item .item-content-wrapper a p {
+    word-break: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 0;
+    margin-top: 5px;
+  }
+  
+  .news-item .item-image {
+    flex-shrink: 0;
+    width: 160px;
+    margin-left: 16px;
+  }
+  
+  .news-item .item-image img {
+    width: 100%;
+  }
+  
+  
+  @media screen and (max-width: 767px) {
+    .main-heading { 
+      font-size: 1.5rem;
+    }
+  
+    .main-heading::before {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  
+    .news-list-wrapper {
+      padding: 0 16px;
+    }
+  
+    .news-list-wrapper .news-item {
+      flex-direction: column;
+    }
+  
+    .news-item .item-left {
+      padding: 16px 0;
+      flex: 0 0 100%;
+    }
+  
+    .news-item .item-right {
+      padding: 0 0 16px;
+      border-top: none;
+    }
+  
+    .news-item .item-content-wrapper a h2 {
+      font-size: 1rem;
+    }
+  
+    .news-item .item-image{
+      width: 33.33%;
+    }
+  } 
